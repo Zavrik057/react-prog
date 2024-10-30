@@ -1,0 +1,106 @@
+
+.player{
+   width: 350px;
+   padding: 20px;
+   border-radius: 15px;
+   border: 1px solid rgb(116, 116, 116);
+   background: whitesmoke;
+}
+.player__image{
+   width: 100%;
+   min-height: 350px;
+   border-radius: 15px;
+   position: relative;
+   overflow: hidden;
+   margin: 0px 0px 20px 0px;
+}
+.player__image img{
+   position: absolute;
+   object-fit: cover;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+.player__song{
+   font-size: 26px;
+   color: rgb(59, 79, 211);
+   font-weight: bold;
+   text-align: center;
+   text-transform: capitalize;
+   margin: 0px 0px 15px 0px;
+}
+.player__group{
+   text-transform: capitalize;
+   font-size: 20px;
+   color: rgb(157, 157, 157);
+   text-align: center;
+   margin: 0px 0px 20px 0px;
+}
+.player__menu{
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+}
+.player__aria{
+   width: 70%;
+   margin: 0 auto;
+}
+.player__line{
+   width: 100%;
+   height: 4px;
+   border-radius: 60px;
+   background: rgba(59, 79, 211, 0.107);
+}
+.player__index{
+   width: 0%;
+   height: inherit;
+   background: rgb(59, 79, 211);
+   border-radius: 60px;
+   position: relative;
+}
+.player__index::after{
+   position: absolute;
+   content: '';
+   top: 50%; 
+   transform: translateY(-50%);
+   right: -4px;
+   width: 12px;
+   height: 12px;
+   border-radius: 50%;
+   background: rgb(59, 79, 211);
+}
+.player__buttons{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 15px;
+}
+.player__prev,
+.player__next,
+.player__play{
+   width: 40px;
+   height: 40px;
+   background: rgba(59, 79, 211, 0.085);
+   border-radius: 50%;
+   color: rgb(59, 79, 211);
+   font-size: 24px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 5px;
+}
+.player__play{
+   width: 50px;
+   height: 50px;
+   background: rgb(59, 79, 211);
+   color: white;
+   font-size: 30px;
+   transition: all 0.3s ease;
+}
+.player__play:hover{
+   background: rgba(59, 79, 211, 0.726);
+}
+.player__play i.bx-play{
+   padding-left: 3px;
+}

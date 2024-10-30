@@ -1,0 +1,49 @@
+
+.links{
+   margin: 20px 0px 0px 0px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+}
+.link{
+   position: relative;
+   transition: all 0.3s ease;
+}
+.link:hover{
+   scale: 1.2;
+}
+
+.link i{
+   font-size: 30px;
+}
+.bxl-instagram-alt{
+   color: transparent;
+   background: linear-gradient(45deg, rgb(255, 248, 39), rgb(204, 58, 99), rgb(177, 50, 213));
+   -webkit-background-clip: text;
+}
+.bxl-youtube{
+   z-index: 3;
+   position: relative;
+   color: rgb(239, 72, 72);
+}
+.link.link--mod::after{
+   position: absolute;
+   content: '';
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 50%;
+   background: whitesmoke;
+   height: 50%;
+}
+.link.link--mod.link--none::after{
+   display: none;
+}
+.bxl-facebook-circle{
+   color: rgb(58, 143, 218);
+}
+.link.link--none i{
+   color: rgba(196, 196, 196, 0.53);
+}
