@@ -1,0 +1,13 @@
+
+.stars{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   padding: 10px 0;
+   gap: 5px;
+   color: transparent;
+   background: linear-gradient(90deg, rgb(235, 173, 16), rgb(238, 225, 44));
+   -webkit-background-clip: text;
+   background-clip: text;
+   font-size: 1.6em;
+}

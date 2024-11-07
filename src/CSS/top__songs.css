@@ -1,38 +1,41 @@
 
 .top{
-   margin: 50px 0px;
+   margin: 100px 0px;
    width: 100%;
+   position: relative;
+}
+.top__banner{
+   position: absolute;
+   width: 100%;
+   top: -30%;
+   left: 0;
+   text-align: center;
+   font-size: 22em;
+   color: rgba(24, 20, 42, 0.297);
+   font-weight: bold;
+   text-transform: uppercase;
 }
 .top__display{
    width: 100%;
    display: grid;
-   grid-template-columns: 3fr 2fr;
-   gap: 20px;
+   grid-template-columns: 3fr 1.8fr;
+}
+.top__title{
+   display: none;
 }
 .top__songs{
    display: flex;
    flex-direction: column;
    gap: 30px;
+   border-right: 1px solid rgb(18, 17, 42);
+   padding: 0px 35px 0px 0px;
 }
 .top__item{
    position: relative;
-   overflow: hidden;
    width: 100%;
    display: flex;
    align-items: center;
    gap: 30px;
-}
-.top__item::after{
-   position: absolute;
-   content: '';
-   top: 50%;
-   transform: translateY(-50%);
-   right: 2%;
-   width: 0px;
-   height: 0px;
-   border-radius: 50%;
-   box-shadow: 0px 0px 120px 70px rgba(139, 113, 166, 0.146);
-   z-index: 4;
 }
 .top__place{
    width: 5%;
@@ -54,4 +57,110 @@
    left: 0;
    width: 100%;
    height: 100%;
+}
+.top__albums{
+   display: flex;
+   flex-direction: column;
+   padding: 0px 0px 0px 40px;
+}
+.top__album{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   position: relative;
+}
+.top__album:not(:last-child)::after{
+   position: absolute;
+   content: '';
+   bottom: -60px;
+   left: 0;
+   width: 100%;
+   height: 1px;
+   background: rgb(18, 17, 42);
+}
+.top__album-place{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: end;
+   font-size: 20em;
+   font-weight: bold;
+   color: rgba(24, 20, 42, 0.414);
+   z-index: -1;
+}
+.top__albums-display{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+   gap: 40px;
+}
+.top__album-image{
+   position: relative;
+   border-radius: 10px;
+   width: 40%;
+   height: 12em;
+   object-fit: cover;
+   border-radius: 10px;
+}
+.top__album-image::after{
+   position: absolute;
+   content: '';
+   bottom: 10%;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 0;
+   height: 0;
+   border-radius: 50%;
+   z-index: -1;
+   box-shadow: 0px 0px 100px 50px rgba(47, 125, 199, 0.518);
+}
+.top__album-image img{
+   position: absolute;
+   border-radius: 10px;
+   object-fit: cover;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+.top__content{
+   text-transform: capitalize;
+   color: rgb(194, 194, 194);
+   flex: 1 1 auto;
+}
+.top__icon{
+   font-size: 1.5em;
+   color: whitesmoke;
+}
+.top__icon:hover{
+   scale: 1.15;
+}
+.top__icon i{
+   color: whitesmoke;
+}
+.top__icon i.active{
+   color: rgb(221, 75, 75);
+}
+.top__album-content{
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+}
+.top__album-name{
+   font-size: 2em;
+   font-weight: bold;
+   color: rgb(68, 66, 110);
+   text-transform: capitalize;
+}
+.top__album-year{
+   color: whitesmoke;
+   font-size: 1em;
 }
