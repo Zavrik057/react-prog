@@ -1,9 +1,8 @@
 
 import '../CSS/player.css'
-import { source } from "../data/player__data";
 import { useState, useRef, useEffect } from 'react';
-/*
-export default function Player() {
+
+export default function Player({ MUSIC }) {
    const [currentSong, setCurrentSong] = useState(0);
    const [isPlaing, setIsPlaying] = useState(false);
    const [widthDuration, setWidthDuration] = useState(0);
@@ -74,4 +73,4 @@ export default function Player() {
          </div>
       </>
    )
-}*/
+}
