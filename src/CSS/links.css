@@ -15,35 +15,41 @@
    scale: 1.2;
 }
 
-.link i{
+.link__icon{
    font-size: 30px;
 }
-.bxl-instagram-alt{
-   color: transparent;
+.link__icon.link--mod{
+   position: relative;
+}
+.instagram, .tiktok{
+   color: rgb(236, 31, 89);
    background: linear-gradient(45deg, rgb(255, 248, 39), rgb(204, 58, 99), rgb(177, 50, 213));
    -webkit-background-clip: text;
+   position: relative;
+   /* background-clip: text; */
 }
-.bxl-youtube{
+.youtube{
    z-index: 3;
    position: relative;
-   color: rgb(239, 72, 72);
+   color: rgb(218, 46, 46);
 }
-.link.link--mod::after{
+.link__icon.facebook::after{
    position: absolute;
    content: '';
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   width: 50%;
+   width: 200%;
+   aspect-ratio: 1/1;
+   border-radius: 50%;
+   z-index: 2;
    background: whitesmoke;
-   height: 50%;
 }
-.link.link--mod.link--none::after{
-   display: none;
-}
-.bxl-facebook-circle{
+.facebook, .twiter{
    color: rgb(58, 143, 218);
+   position: relative;
 }
-.link.link--none i{
+
+.link.link--none .link__icon{
    color: rgba(196, 196, 196, 0.53);
 }

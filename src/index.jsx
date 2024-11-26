@@ -5,7 +5,7 @@ import reportWebVitals from './components/reportWebVitals.jsx';
 import { findAllByAltText } from '@testing-library/react';
 import App from './components/App.jsx';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.body);
 
 root.render(
    <React.StrictMode>

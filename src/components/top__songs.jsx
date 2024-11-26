@@ -3,6 +3,7 @@ import { useRef, useState } from 'react'
 import '../CSS/top__songs.css'
 import Button from './button';
 import Stars from './stars';
+import { Link } from 'react-router-dom';
 export default function TopTen({ data }) {
    //const imageRef = useRef();
    //const [isColor, setColor] = useState(false);
@@ -32,8 +33,7 @@ export default function TopTen({ data }) {
                                        <div className="top__duration"></div>
                                     </div>
                                     <div className="top__icon" onClick={changeColor}><i class='bx bxs-heart'></i></div>
-                                    <a href="" className="top__ref"><Button color={'rgb(57, 246, 158)'}>check song</Button></a>
-
+                                    <Link to={'/album/' + item.id}><Button color={'rgb(57, 246, 158)'}>check song</Button></Link>
                                  </div>
                               </>
                            )

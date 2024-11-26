@@ -3,6 +3,8 @@ import '../CSS/stage.css'
 import Button from './button';
 import { useState, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Stage({ data }) {
    const [currentStage, setCurrentStage] = useState(1);
@@ -48,8 +50,8 @@ export default function Stage({ data }) {
                         })}
                      </div>
                      <div className="stage__buttons">
-                        <div className="stage__prev" onClick={prevSlide}><i class='bx bx-chevron-left'></i></div>
-                        <div className="stage__next" onClick={nextSlide}><i class='bx bx-chevron-right'></i></div>
+                        <div className="stage__prev" onClick={prevSlide}><FontAwesomeIcon icon={faAngleLeft} /></div>
+                        <div className="stage__next" onClick={nextSlide}><FontAwesomeIcon icon={faAngleRight} /></div>
                      </div>
                   </div>
                   <div className="stage__list">

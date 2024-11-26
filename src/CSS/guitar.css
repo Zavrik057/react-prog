@@ -1,0 +1,30 @@
+
+.guitar{
+   position: absolute;
+   width: 12vw;
+   padding: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.guitar__image{
+   position: relative;
+}
+.guitar__image::after{
+   position: absolute;
+   content: '';
+   bottom: 20%;
+   left: 35%;
+   width: 0;
+   height: 0;
+   box-shadow: 0px 0px 100px 35px rgba(169, 167, 172, 0.708);
+   z-index: -1;
+}
+.guitar:nth-child(3) .guitar__image::after{
+   left: 90%;
+   bottom: 20%;
+}
+.guitar__image img{
+   width: 100%;
+   height: auto;
+}

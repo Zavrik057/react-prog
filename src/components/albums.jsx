@@ -4,23 +4,20 @@ import { source } from '../data/player__data'
 import { useInView } from 'react-intersection-observer';
 import Album from './album';
 
-export default function Albums(){
+export default function Albums() {
 
-   let albumsArr = [];
-   for(let item in source['metallica'].albums){
-      albumsArr.push({name: item, image: source['metallica'].albums[`${item}`].image});
-   }
+   const albumsArr = source['metallica'].albums;
    return (
       <>
-      <div className="albums">
-         <div className="container">
-            <div className="albums__display">
-               {albumsArr.map(item => {
-                  return <Album item={item}/>
-               })}
+         <div className="albums">
+            <div className="container">
+               <div className="albums__display">
+                  {albumsArr.map((item, index) => {
+                     return <Album item={item} index={index}/>
+                  })}
+               </div>
             </div>
          </div>
-      </div>
       </>
    )
 }

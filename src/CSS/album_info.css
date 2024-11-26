@@ -1,0 +1,116 @@
+
+.album-info{
+   width: 100%;
+   margin: 100px 0px;
+}
+.album-info__display{
+   width: 100%;
+   display: grid;
+   grid-template-columns: 3fr 2fr;
+   gap: 10em;
+}
+.album-info__main{
+   display: flex;
+   flex-direction: column;
+   gap: 50px;
+}
+.album-info__title{
+   text-transform: capitalize;
+   font-size: 4.8em;
+   /* color: rgb(244, 226, 65); */
+   color: rgb(5, 2, 20);
+   font-family: 'popins' sans-serif;
+   -webkit-text-stroke: 1px rgb(244, 226, 65);
+   font-weight: bold;
+}
+.album-info__block{
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+}
+.album-info__side{
+   display: flex;
+   flex-direction: column;
+}
+.album-info__text{
+   font-size: 16px;
+   color: rgb(198, 197, 223);
+   line-height: 140%;
+   position: relative;
+   padding: 30px 0 0 30px;
+}
+.album-info__text::after{
+   position: absolute;
+   content: '';
+   top: 0;
+   left: 0;
+   width: 2px;
+   height: 100%;
+   background-color: rgba(59, 55, 106, 0.885);
+}
+.album-info__text::before{
+   position: absolute;
+   content: '';
+   top: 0;
+   left: 0;
+   width: 70%;
+   height: 2px;
+   background-color: rgba(59, 55, 106, 0.856);
+}
+.album-info__content{
+   padding: 20px 40px;
+   border-radius: 10px;
+   background-color: rgba(25, 24, 32, 0.611);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   gap: 10px;
+   flex: 1 1 auto;
+}
+.album-info__content > *{
+   width: 100%;
+   text-transform: capitalize;
+   font-size: 18px;
+   color: whitesmoke;
+   display: flex;
+   align-items: center;
+   gap: 20px;
+}
+.album-info__achieve span{
+   flex: 1 1 auto;
+   display: inline-block;
+   padding: 15px 10px;
+   border-radius: 10px;
+   background-color: rgba(69, 231, 128, 0.051);
+   color: #54e38b;
+   font-size: 16px;
+}
+
+.album-info__release{
+   background-color: #fad3903c;
+   color: #fad390;
+}
+.album-info__records{
+   background-color: #6a89cc4e;
+   color: #6a89cc;
+}
+.album-info__studio{
+   background-color: #b7e99448;
+   color: #b8e994;
+}
+.album-info__genre{
+   background-color: #78e08f4d;
+   color: #78e08f;
+}
+.album-info__length{
+   background-color: #f6b83b4c;
+   color: #f6b93b;
+}
+.album-info__label{
+   background-color: #e5503944;
+   color: #e55039;
+}
+.album-info__producer{
+   background-color: #4a69bd4f;
+   color: #4a69bd;
+}
