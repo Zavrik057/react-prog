@@ -2,17 +2,20 @@
 import MemberCard from "./member__card";
 import MemberContent from "./members__content";
 import '../CSS/members.css'
+import Banner from "./banner";
 
 export default function Members({ data }) {
    return (
       <>
          <div className="members">
+            <Banner>members</Banner>
             <div className="container">
                <div className="members__display">
                   {data.map((item, index) => {
                      return (
                         <div className="members__row" 
                         style={{gridTemplateColumns: index % 2 === 0 ? ' 40% 1fr' : '1fr 40%'}}
+                        key={index}
                         >
                            {index % 2 === 0 && <>
                               <div className="members__display-image"><MemberCard image={item.image} /></div>

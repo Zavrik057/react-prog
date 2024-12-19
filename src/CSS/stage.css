@@ -105,11 +105,14 @@
 .stage__item:nth-of-type(4) > *{
    display: none;
 }
-.stage__item:nth-of-type(n + 5){
+.stage__item:nth-of-type(5){
    left: 145%;
    width: 30%;
    height: 40vh;
    opacity: 0;
+}
+.stage__item:nth-of-type(n + 6){
+   display: none;
 }
 .stage__list{
    margin: 50px 0px 0px 0px;

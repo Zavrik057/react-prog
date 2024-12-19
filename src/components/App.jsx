@@ -15,6 +15,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AlbumPage from '../pages/album_page.jsx';
 import GroupPage from '../pages/group_page.jsx';
 import ScrollToTop from '../utils/ScrollToTop.jsx';
+import MainPage from '../pages/main_page.jsx';
 // import gsap from "gsap";
 // import { ScrollTrigger } from "gsap-trial/ScrollTrigger";
 // import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
@@ -41,8 +42,10 @@ export default function App() {
           <ScrollToTop />
           <Navbar />
           <Routes>
-            <Route exact path='/' element={<GroupPage />} />
-            <Route exact path='/album/:id' element={<AlbumPage />} />
+          <Route exact path='/' element={<MainPage />} />
+          <Route exact path='/' element={<MainPage />} />
+            <Route exact path='/:album' element={<GroupPage />} />
+            <Route exact path='/:album/:id' element={<AlbumPage />} />
           </Routes>
         </BrowserRouter>
       </div>

@@ -1,20 +1,18 @@
 
 import '../CSS/albums.css'
-import { source } from '../data/player__data'
 import { useInView } from 'react-intersection-observer';
 import Album from './album';
+import Banner from './banner';
 
-export default function Albums() {
+export default function Albums({ data, group }) {
 
-   const albumsArr = source['metallica'].albums;
    return (
       <>
          <div className="albums">
+            <Banner>albums</Banner>
             <div className="container">
                <div className="albums__display">
-                  {albumsArr.map((item, index) => {
-                     return <Album item={item} index={index}/>
-                  })}
+                  {data.map((item, index) => <Album key={index} item={item} index={index} group={group} />)}
                </div>
             </div>
          </div>

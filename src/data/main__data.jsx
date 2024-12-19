@@ -4,83 +4,103 @@ export const main = {
       {
          name: 'ac dc',
          image: '../pictures/groups/ACDC.jpeg',
+         enable: false,
       },
       {
          name: 'the beatles',
          image: '../pictures/groups/beatles.jpeg',
+         enable: false,
       },
       {
          name: 'boston',
          image: '../pictures/groups/boston.jpeg',
+         enable: false,
       },
       {
          name: 'deep purple',
          image: '../pictures/groups/deep_purple.jpeg',
+         enable: false,
       },
       {
          name: 'europe',
          image: '../pictures/groups/europe.jpeg',
+         enable: false,
       },
       {
          name: 'fleetwood mac',
          image: '../pictures/groups/fleetwood_mac.jpeg',
+         enable: false,
       },
       {
          name: 'green day',
          image: '../pictures/groups/green_day.jpeg',
+         enable: false,
       },
       {
          name: 'gund n\' roses',
          image: '../pictures/groups/guns_n_roses.jpeg',
+         enable: false,
       },
       {
          name: 'journey',
          image: '../pictures/groups/journey.jpeg',
+         enable: false,
       },
       {
          name: 'led zeppelin',
          image: '../pictures/groups/led_zeppelin.webp',
+         enable: false,
       },
 
       {
          name: 'megadeth',
          image: '../pictures/groups/megadeth.webp',
+         enable: false,
       },
       {
          name: 'metallica',
          image: '../pictures/groups/metallica.webp',
+         enable: true,
       },
       {
          name: 'nirvana',
          image: '../pictures/groups/nirvana.webp',
+         enable: false,
       },
       {
          name: 'pink floyd',
          image: '../pictures/groups/pink_floyd.jpeg',
+         enable: false,
       },
       {
          name: 'queen',
          image: '../pictures/groups/queen.jpeg',
+         enable: false,
       },
       {
          name: 'rainbow',
          image: '../pictures/groups/rainbow.webp',
+         enable: false,
       },
       {
          name: 'rammstein',
          image: '../pictures/groups/rammstein.jpeg',
+         enable: false,
       },
       {
          name: 'red hot chilli peppers',
          image: '../pictures/groups/red_hot_chili_peppers.webp',
+         enable: false,
       },
       {
          name: 'scorpions',
          image: '../pictures/groups/scorpions.webp',
+         enable: true,
       },
       {
          name: 'system of a down',
          image: '../pictures/groups/system_of_a_down.webp',
+         enable: false,
       },
 
    ],
@@ -107,6 +127,7 @@ export const main = {
          place: 1,
          name: 'still loving you',
          album: 'scorpions',
+         group: 'scorpions',
          duration: '',
          src: '',
          image: '../pictures/top/love_at_first_sting.jpeg'
@@ -116,6 +137,7 @@ export const main = {
          place: 2,
          name: 'wind of change',
          album: 'scorpions',
+         group: 'scorpions',
          duration: '',
          src: '',
          image: '../pictures/top/crazy_world.jpeg'
@@ -125,6 +147,7 @@ export const main = {
          place: 3,
          name: 'november rain',
          album: 'guns n roses',
+         group: 'guns n roses',
          duration: '',
          src: '',
          image: '../pictures/top/use_your_ilusion_1.jpeg',
@@ -134,6 +157,7 @@ export const main = {
          place: 4,
          name: 'starway to heaven',
          album: 'led zeppelin',
+         group: 'led zeppelin',
          duration: '',
          src: '',
          image: '../pictures/top/led_zeppelin_4.jpeg'
@@ -143,6 +167,7 @@ export const main = {
          place: 5,
          name: 'nothing else matters',
          album: 'metallica',
+         group: 'metallica',
          duration: '',
          src: '',
          image: '../pictures/top/black-album.webp'
@@ -152,6 +177,7 @@ export const main = {
          place: 6,
          name: 'send me an angel',
          album: 'scorpions',
+         group: 'scorpions',
          duration: '',
          src: '',
          image: '../pictures/top/crazy_world.jpeg'
@@ -161,6 +187,7 @@ export const main = {
          place: 7,
          name: 'bohemian rhapsody',
          album: 'queen',
+         group: 'queen',
          duration: '',
          src: '',
          image: '../pictures/top/a_night_in_the_opera.jpeg'
@@ -170,6 +197,7 @@ export const main = {
          place: 8,
          name: 'fade to black',
          album: 'metallica',
+         group: 'metallica',
          duration: '',
          src: '',
          image: '../pictures/top/ride-the-lightning.png'
@@ -179,6 +207,7 @@ export const main = {
          place: 9,
          name: 'sweat child of mine',
          album: 'guns n roses',
+         group: 'guns n roses',
          duration: '',
          src: '',
          image: '../pictures/top/apetite_for_distruction.jpeg',
@@ -188,6 +217,7 @@ export const main = {
          place: 10,
          name: 'always somewere',
          album: 'scorpions',
+         group: 'scorpions',
          duration: '',
          src: '',
          image: '../pictures/top/lovedrive.webp'

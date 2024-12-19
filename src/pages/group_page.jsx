@@ -6,20 +6,21 @@ import PrevMemb from '../components/prev__memb.jsx';
 import Stage from '../components/stage.jsx';
 import Albums from '../components/albums.jsx';
 import Header from '../components/header.jsx';
-import GroupList from '../components/groups_list.jsx';
-import { main } from '../data/main__data.jsx';
+import { useParams } from 'react-router-dom';
+import { source } from '../data/player__data.jsx';
+import HeaderGroup from '../components/header_group.jsx';
 
 export default function GroupPage() {
+   const { album } = useParams();
+   console.log(album);
    return (
       <>
-         <Header />
-         <GroupList />
-         <TopTen data={[main.topSongs, main.topAlbums]}/>
-         <Members data={groups['metallica'].currentMembers} />
-         <TopTen data={[groups['metallica'].topSongs, groups['metallica'].topAlbums]}></TopTen>
+         <HeaderGroup data={groups[`${album}`]}/>
+         <Members data={groups[`${album}`].currentMembers} />
+         <TopTen data={[groups[`${album}`].topSongs, groups[`${album}`].topAlbums]}></TopTen>
          {/* <PrevMemb data={groups['metallica'].prevMembers} /> */}
-         <Stage data={groups['metallica'].stage} />
-         <Albums />
+         <Stage data={groups[`${album}`].stage} />
+         <Albums data={source[`${album}`].albums} group={album}/>
       </>
    )
 }

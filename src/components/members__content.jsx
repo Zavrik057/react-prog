@@ -8,7 +8,7 @@ export default function MemberContent({index, data }) {
          <div className="memb__content">
             <div className="memb__shade memb__shade--1"></div>
             <div className="memb__shade memb__shade--2"></div>
-            <div className="memb__row">
+            <div className="memb__row" style={{gridTemplateColumns: index % 2 === 0 ? '4fr 1fr' : '1fr 4fr'}}>
                <div className="memb__left" style={{order: index % 2 === 0 ? 1 : 2}}>
                   <div className="memb__name">{data.name}</div>
                   <div className="memb__role">

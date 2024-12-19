@@ -1,0 +1,41 @@
+
+.player-more__display{
+   width: 100%;
+   height: 20vh;
+   overflow: hidden;
+}
+.player-swiper{
+   width: 70vw;
+   height: 100%;
+   position: relative;
+   overflow: hidden;
+}
+.player-slide{
+   width: 100%;
+   min-width: 90px;
+   display: flex;
+   flex-direction: column;
+   gap: 1em;
+   align-items: center;
+}
+.player-slide__image{
+   width: 100%;
+   aspect-ratio: 1/1;
+   border-radius: 10px;
+   overflow: hidden;
+   position: relative;
+}
+.player-slide__image img{
+   position: absolute;
+   object-fit: cover;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+.player-slide__name{
+   font-size: 1em;
+   color: whitesmoke;
+   text-align: center;
+   text-transform: capitalize;
+}

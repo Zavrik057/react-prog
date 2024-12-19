@@ -1,0 +1,12 @@
+
+.years{
+   width: 100%;
+   margin: 100px 0px;
+   position: relative;
+}
+.years__display{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 40vh;
+}

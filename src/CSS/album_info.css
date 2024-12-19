@@ -1,12 +1,14 @@
 
 .album-info{
-   width: 100%;
-   margin: 100px 0px;
+   width: 80%;
+   margin: 0 auto;
+   background-color: #080312;
+   padding: 4em;
 }
 .album-info__display{
    width: 100%;
    display: grid;
-   grid-template-columns: 3fr 2fr;
+   grid-template-columns: 3fr 40%;
    gap: 10em;
 }
 .album-info__main{
@@ -16,7 +18,7 @@
 }
 .album-info__title{
    text-transform: capitalize;
-   font-size: 4.8em;
+   font-size: 3em;
    /* color: rgb(244, 226, 65); */
    color: rgb(5, 2, 20);
    font-family: 'popins' sans-serif;
@@ -33,7 +35,7 @@
    flex-direction: column;
 }
 .album-info__text{
-   font-size: 16px;
+   font-size: 14px;
    color: rgb(198, 197, 223);
    line-height: 140%;
    position: relative;

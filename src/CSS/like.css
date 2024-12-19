@@ -1,0 +1,15 @@
+
+.like{
+   font-size: 1.7em;
+   color: whitesmoke;
+   transition: all 0.2s ease;
+}
+.like._liked{
+   color: rgb(240, 73, 73);
+}
+.like:hover{
+   scale: 1.2;
+}
+.like._liked:hover{
+   color: rgb(237, 103, 103);
+}

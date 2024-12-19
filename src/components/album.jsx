@@ -4,13 +4,13 @@ import { useInView } from "react-intersection-observer"
 import { Link } from "react-router-dom";
 import { source } from "../data/player__data";
 
-export default function Album({ item, index }) {
+export default function Album({ item, index, group }) {
 
    const [album, isAlbum] = useInView({ threshold: 0.3, triggerOnce: true });
 
    return (
       <>
-         <Link to={'/album/' + index}>
+         <Link to={`/${group}/${index}`}>
             <div className="album" ref={album}>
                <a className="album__image" src="">
                   <div className="album__image-display">

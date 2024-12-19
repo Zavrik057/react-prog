@@ -35,7 +35,7 @@ export default function Stage({ data }) {
                         {data[currentStage].images.map((item, index) => {
                            return (
                               <>
-                                 <div className="stage__item" style={{ backgroundImage: `url('${item}')` }}>
+                                 <div className="stage__item" style={{ backgroundImage: `url('${item}')` }} key={index}>
                                     <div className="stage__inner">
                                        <div className="stage__content">
                                           <div className="stage__coutry">{data[currentStage].coutry}</div>
@@ -56,7 +56,7 @@ export default function Stage({ data }) {
                   </div>
                   <div className="stage__list">
                      {
-                        data.map((item, index) => <div onClick={() => handleStage(index)} className={currentStage !== index ? 'stage__list-item' : 'stage__list-item current'}></div>)
+                        data.map((item, index) => <div key={index} onClick={() => handleStage(index)} className={currentStage !== index ? 'stage__list-item' : 'stage__list-item current'}></div>)
                      }
                   </div>
                </div>

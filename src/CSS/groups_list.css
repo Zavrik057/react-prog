@@ -2,6 +2,7 @@
 .groups{
    width: 100%;
    margin: 100px 0px;
+   position: relative;
 }
 .groups__display{
    width: 100%;

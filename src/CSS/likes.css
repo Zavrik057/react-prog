@@ -1,0 +1,68 @@
+
+.likes{
+   position: relative;
+}
+.likes__icon{
+   font-size: 2.5em;
+   color: rgb(213, 53, 53);
+   transition: all 0.3s ease;
+}
+.likes__icon:hover{
+   color: rgb(201, 77, 77);
+   scale: 1.2;
+}
+.likes__count{
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   width: 20px;
+   aspect-ratio: 1/1;
+   border-radius: 50%;
+   border: 2px solid white;
+   background-color: black;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 10px;
+   color: white;
+}
+.likes-menu{
+   opacity: 0;
+   display: none;
+   position: absolute;
+   min-width: 25vw;
+   min-height: 60vh;
+   background-color: rgb(33, 20, 55);
+   top: -100%;
+   right: 0;
+   z-index: -20;
+   padding: 15px;
+}
+.likes-menu._active{
+   animation: likes 0.5s ease;
+   opacity: 1;
+   top: 100%;
+   display: flex;
+   flex-direction: column;
+}
+@keyframes likes {
+   0%{
+      top: -100%;
+      opacity: 0;
+   }
+   100%{
+      top: 100%;
+      opacity: 1;
+   }
+}
+.likes-menu__content{
+   width: 100%;
+   border: 2px solid rgb(50, 31, 83);
+   border-radius: 5px;
+   flex: 1 1 auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: whitesmoke;
+   font-size: 30px;
+}

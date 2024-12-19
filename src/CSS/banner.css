@@ -1,0 +1,17 @@
+
+.banner__banner{
+   position: absolute;
+   width: 100%;
+   top: calc(-25vh);
+   left: 0;
+   text-align: center;
+   font-size: 22em;
+   color: rgba(24, 20, 42, 0.297);
+   font-weight: bold;
+   text-transform: uppercase;
+}
+.banner__text{
+   position: absolute;
+   left: -50%;
+   transform: translateX(-50%);
+}
