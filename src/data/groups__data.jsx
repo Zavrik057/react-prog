@@ -117,7 +117,8 @@ export const groups = {
             group: 'metallica',
             duration: '',
             src: '',
-            image: '../pictures/metallica/albums/black-album.webp'
+            image: '../pictures/metallica/albums/black-album.webp',
+            isAdded: false,
          },
          {
             id: '1',
@@ -127,7 +128,8 @@ export const groups = {
             group: 'metallica',
             duration: '',
             src: '',
-            image: '../pictures/metallica/albums/ride-the-lightning.png'
+            image: '../pictures/metallica/albums/ride-the-lightning.png',
+            isAdded: false,
          },
          {
             id: '2',
@@ -138,6 +140,7 @@ export const groups = {
             duration: '',
             src: '',
             image: '../pictures/metallica/albums/master-of-puppets.webp',
+            isAdded: false,
          },
          {
             id: '3',
@@ -147,7 +150,8 @@ export const groups = {
             group: 'metallica',
             duration: '',
             src: '',
-            image: '../pictures/metallica/albums/and-justice-for-all.webp'
+            image: '../pictures/metallica/albums/and-justice-for-all.webp',
+            isAdded: false,
          },
          {
             id: '4',
@@ -157,7 +161,8 @@ export const groups = {
             group: 'metallica',
             duration: '',
             src: '',
-            image: '../pictures/metallica/albums/black-album.webp'
+            image: '../pictures/metallica/albums/black-album.webp',
+            isAdded: false,
          },
          {
             id: '1',
@@ -167,7 +172,8 @@ export const groups = {
             group: 'metallica',
             duration: '',
             src: '',
-            image: '../pictures/metallica/albums/ride-the-lightning.png'
+            image: '../pictures/metallica/albums/ride-the-lightning.png',
+            isAdded: false,
          },
          {
             id: '0',
@@ -177,7 +183,8 @@ export const groups = {
             group: 'metallica',
             duration: '',
             src: '',
-            image: '../pictures/metallica/albums/kill-em-all.jpeg'
+            image: '../pictures/metallica/albums/kill-em-all.jpeg',
+            isAdded: false,
          },
          {
             id: '10',
@@ -187,7 +194,8 @@ export const groups = {
             group: 'metallica',
             duration: '',
             src: '',
-            image: '../pictures/metallica/albums/72-seasons.webp'
+            image: '../pictures/metallica/albums/72-seasons.webp',
+            isAdded: false,
          },
          {
             id: '2',
@@ -198,6 +206,7 @@ export const groups = {
             duration: '',
             src: '',
             image: '../pictures/metallica/albums/master-of-puppets.webp',
+            isAdded: false,
          },
          {
             id: '4',
@@ -207,7 +216,8 @@ export const groups = {
             group: 'metallica',
             duration: '',
             src: '',
-            image: '../pictures/metallica/albums/black-album.webp'
+            image: '../pictures/metallica/albums/black-album.webp',
+            isAdded: false,
          }
       ],
       stage: [

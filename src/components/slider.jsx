@@ -1,5 +1,5 @@
 
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBackward, faForward } from '@fortawesome/free-solid-svg-icons';
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -14,15 +14,17 @@ import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules'
 import '../CSS/slider.css'
 
 import { main } from '../data/main__data';
-import { use } from 'framer-motion/client';
+import { useViewport } from 'react-viewport-hooks';
 
 function Slider() {
    const data = main.years;
    const swiper = useRef();
    const [current, setCurrent] = useState(null);
+   const { vw } = useViewport();
+   const [slides, setSlides] = useState(3);
+
    useEffect(() => {
       setCurrent(swiper.current.querySelector('.swiper-slide-visible'));
-      console.log(current);
    }, []);
 
    return (
@@ -32,11 +34,11 @@ function Slider() {
                ref={swiper}
                className='swiper_container'
                effect="coverflow"
-               spaceBetween={50}
+               spaceBetween={vw > 770 ? 50 : 70}
                grabCursor={true}
                centeredSlide={true}
                loop={true}
-               slidesPerView={3}
+               slidesPerView={vw > 770 ? 3 : 1}
                navigation={{
                   prevEl: '.swiper__prev',
                   nextEl: '.swiper__next',

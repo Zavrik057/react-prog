@@ -241,3 +241,43 @@
    border: 1px solid rgb(146, 231, 191);
    background: rgb(146, 231, 191);
 }
+@media (max-width: 1210px) {
+   .card{
+      width: 90%;
+   }
+}
+@media (max-width: 1010px){
+   .content{
+     height: 300px;
+   }
+   .shape__label{
+      width: 100px;
+      height: 50px;
+   }
+}
+@media (max-width: 770px){
+   .card{
+      width: 70%;
+   }
+   .content{
+      height: 450px;
+   }
+}
+@media (max-width: 570px){
+   .card{
+      width: 85%;
+   }
+}
+@media (max-width: 440px){
+   .content{
+      height: 350px;
+   }
+}
+@media (max-width: 360px){
+   .card{
+      width: 100%;
+   }
+   .content{
+      height: 270px;
+   }
+}

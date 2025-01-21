@@ -87,3 +87,45 @@
    color: whitesmoke;
    text-transform: capitalize;
 }
+@media (max-width: 778px) {
+   .slider__image{
+      width: 80%;
+   }
+   .slider__song {
+      margin: 15px 0px 0px 0px;
+   }
+   
+   .slider__year {
+      margin: 20px 0px 0px 0px;
+      font-size: 2em;
+      color: whitesmoke;
+      font-weight: bold;
+   }
+   .swiper__controlers{
+      margin: 2em 0px 0px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+   }
+   .swiper__next, .swiper__prev{
+      font-size: 2em;
+   }
+   .swiper__text{
+      font-size: 2em;
+   }
+ }
+ @media (max-width: 500px){
+   .swiper__text{
+      font-size: 1.5em;
+      text-align: center;
+   }
+ }
+ @media (max-width: 420px){
+   .swiper__next, .swiper__prev{
+      font-size: 1.5em;
+   }
+   .swiper__text{
+      font-size: 1.2em;
+   }
+ }

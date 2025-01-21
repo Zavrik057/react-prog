@@ -1,17 +1,19 @@
-
-.likes{
+.likes {
    position: relative;
 }
-.likes__icon{
+
+.likes__icon {
    font-size: 2.5em;
    color: rgb(213, 53, 53);
    transition: all 0.3s ease;
 }
-.likes__icon:hover{
+
+.likes__icon:hover {
    color: rgb(201, 77, 77);
    scale: 1.2;
 }
-.likes__count{
+
+.likes__count {
    position: absolute;
    bottom: 0;
    right: 0;
@@ -26,43 +28,113 @@
    font-size: 10px;
    color: white;
 }
-.likes-menu{
+
+.likes-menu {
    opacity: 0;
    display: none;
    position: absolute;
    min-width: 25vw;
    min-height: 60vh;
+   max-height: 80vh;
+   overflow: scroll;
    background-color: rgb(33, 20, 55);
    top: -100%;
    right: 0;
    z-index: -20;
    padding: 15px;
 }
-.likes-menu._active{
+
+.likes-menu::-webkit-scrollbar {
+   display: none;
+}
+
+.likes-menu._active {
    animation: likes 0.5s ease;
    opacity: 1;
    top: 100%;
    display: flex;
    flex-direction: column;
 }
+
 @keyframes likes {
-   0%{
+   0% {
       top: -100%;
       opacity: 0;
    }
-   100%{
+
+   100% {
       top: 100%;
       opacity: 1;
    }
 }
-.likes-menu__content{
+
+.likes-menu__content {
    width: 100%;
    border: 2px solid rgb(50, 31, 83);
    border-radius: 5px;
    flex: 1 1 auto;
    display: flex;
-   align-items: center;
-   justify-content: center;
+   flex-direction: column;
+   gap: 20px;
+   padding: 20px;
    color: whitesmoke;
    font-size: 30px;
+}
+
+.likes-item {
+   width: 100%;
+   display: grid;
+   grid-template-columns: 18% 1fr 5%;
+   gap: 20px;
+}
+
+.likes__image {
+   width: 100%;
+   aspect-ratio: 1/1;
+   border-radius: 5px;
+   overflow: hidden;
+   position: relative;
+}
+
+.likes__image img {
+   position: absolute;
+   object-fit: cover;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+
+.likes__text {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   justify-content: center;
+}
+
+.likes__name {
+   color: whitesmoke;
+   font-size: 16px;
+   text-transform: capitalize;
+}
+
+.likes__group {
+   color: rgb(224, 224, 224)smoke;
+   font-size: 14px;
+   text-transform: capitalize;
+}
+
+.likes__remove {
+   display: flex;
+   align-items: center;
+}
+
+.likes__remove-icon{
+   color: rgb(85, 68, 127);
+   font-size: 24px;
+   transition: all 0.3s ease;
+}
+.likes__remove-icon:hover{
+   color: rgb(119, 98, 172);
+   scale: 1.2;
 }

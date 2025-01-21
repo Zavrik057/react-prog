@@ -2,18 +2,19 @@
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import '../CSS/likes.css'
-import { useState } from "react";
+import { useCallback, useContext, useState } from "react";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { GlobalState } from "./App";
 
 function Likes({ click }) {
 
-   const [count, setCount] = useState(0);
+   const { likes } = useContext(GlobalState);
 
    return (
       <>
          <div className="likes">
             <div className="likes__icon" onClick={click}><FontAwesomeIcon icon={faHeart} /></div>
-            <div className="likes__count">{count}</div>
+            <div className="likes__count">{likes.length}</div>
          </div>
       </>
    );

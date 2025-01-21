@@ -9,18 +9,20 @@ import Header from '../components/header.jsx';
 import { useParams } from 'react-router-dom';
 import { source } from '../data/player__data.jsx';
 import HeaderGroup from '../components/header_group.jsx';
+import { createContext, useContext } from 'react';
+import { GlobalState } from '../components/App.jsx';
 
 export default function GroupPage() {
-   const { album } = useParams();
-   console.log(album);
+
+   const { currentGroup, setCurrentGroup } = useContext(GlobalState);
    return (
       <>
-         <HeaderGroup data={groups[`${album}`]}/>
-         <Members data={groups[`${album}`].currentMembers} />
-         <TopTen data={[groups[`${album}`].topSongs, groups[`${album}`].topAlbums]}></TopTen>
+         <HeaderGroup data={groups[`${currentGroup}`]} />
+         <Members data={groups[`${currentGroup}`].currentMembers} />
+         <TopTen data={[groups[`${currentGroup}`].topSongs, groups[`${currentGroup}`].topAlbums]}></TopTen>
          {/* <PrevMemb data={groups['metallica'].prevMembers} /> */}
-         <Stage data={groups[`${album}`].stage} />
-         <Albums data={source[`${album}`].albums} group={album}/>
+         <Stage data={groups[`${currentGroup}`].stage} />
+         <Albums data={source[`${currentGroup}`].albums} group={currentGroup} />
       </>
    )
 }

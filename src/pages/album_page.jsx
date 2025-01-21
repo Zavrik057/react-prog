@@ -17,8 +17,6 @@ export default function AlbumPage() {
    return (
       <>
          <Player MUSIC={source[`${album}`].albums[id]} group={album} />
-         <AlbumInfo data={source[`${album}`].albums[id]} />
-         <AlbumTop data={source[`${album}`].albums[id].top} />
       </>
    )
 }

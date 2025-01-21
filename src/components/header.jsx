@@ -9,7 +9,7 @@ import { head } from 'framer-motion/client';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faMusic } from '@fortawesome/free-solid-svg-icons';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -90,25 +90,31 @@ export default function Header() {
       <>
          <div className="header" ref={header}>
             <div className="header__cubes">
-            <div className="navbar__shadow"></div>
-            <div className="navbar__shadow"></div>
-            <div className="navbar__shadow"></div>
+               <div className="navbar__shadow"></div>
+               <div className="navbar__shadow"></div>
+               <div className="navbar__shadow"></div>
                {cubesStatic.map((item, index) => <Cube key={index} data={item} color={'rgb(214, 83, 36)'} index={index} />)}
             </div>
             <div className="header__main">
                <div className="container">
                   <div className="header__display">
-                     <div className="header__side">
+                     <div className="header__decor">
+                        <div className="header__decor-content">
+                           <div className="header__block">
+                              <div className="header__banner">my</div>
+                              <div className="header__big-title">favorite</div>
+                              <div className="header__big-title">rock groups</div>
+                           </div>
+                        </div>
+                     </div>
+                     <div className="header__side _side">
                         <div className="header__guitars">
                            {guitars.map((item, index) => <Guitar item={item} find={index} key={index} />)}
                         </div>
                      </div>
                      <div className="header__side">
-                        <div className="header__block">
-                           <div className="header__banner banner">my</div>
-                           <div className="header__heart"><FontAwesomeIcon icon={faHeart} /></div>
-                           <div className="header__big-title big-title">favorite</div>
-                           <div className="header__name big-title">rock groups</div>
+                        <div className="header__heart">
+                           <FontAwesomeIcon icon={faHeart} />
                         </div>
                      </div>
                   </div>

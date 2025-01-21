@@ -1,17 +1,18 @@
-
- .cube__container{
+.cube__container {
    width: 100%;
    display: flex;
    align-items: center;
    justify-content: center;
-} 
-.cube{
+}
+
+.cube {
    background: transparent;
    position: absolute;
    transform-style: preserve-3d;
    transform: rotateX(0deg) rotateY(0deg);
 }
-.cube > * {
+
+.cube>* {
    border-radius: 5px;
    opacity: 0.8;
    display: flex;
@@ -27,9 +28,31 @@
    top: 0;
    left: 0;
 }
-.cube > * img{
+
+.cube>* img {
    display: none;
-}
+} 
+@media (max-width: 1210px) {
+   .cube{
+      scale: 0.8;
+   }
+ }
+ @media (max-width: 1002px) {
+   .cube{
+      scale: 0.65;
+   }
+ }
+ @media (max-width: 770px) {
+   .cube{
+      scale: 0.5;
+   }
+ }
+ @media (max-width: 400px) {
+   .cube{
+      scale: 0.42;
+   }
+ }
+
 /*
 .cube__front{
    transform: translateZ(calc(var(--size) / 2));

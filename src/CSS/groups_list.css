@@ -1,12 +1,37 @@
-
-.groups{
+.groups {
    width: 100%;
    margin: 100px 0px;
    position: relative;
 }
-.groups__display{
+
+.groups__display {
    width: 100%;
    display: grid;
    grid-template-columns: repeat(4, 1fr);
    gap: 50px;
+}
+
+@media (max-width: 1002px) {
+   .groups__display {
+      grid-template-columns: 1fr 1fr 1fr;
+   }
+}
+
+@media (max-width: 778px) {
+   .groups__display {
+      grid-template-columns: 1fr 1fr;
+   }
+   .groups {
+      margin: 40px 0px;
+   }
+}
+
+@media (max-width: 420px) {
+   .groups__display {
+      grid-template-columns: 1fr;
+   }
+   .groups__display {
+      width: 85%;
+      margin: 0 auto;
+   }
 }

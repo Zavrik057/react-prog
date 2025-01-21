@@ -75,3 +75,13 @@
    font-size: 20px;
    color: whitesmoke;
 }
+@media (max-width: 770px) {
+   .albums__display{
+      grid-template-columns: 1fr 1fr;
+   }
+}
+@media (max-width: 440px){
+   .albums__display{
+      grid-template-columns: 1fr;
+   }
+}

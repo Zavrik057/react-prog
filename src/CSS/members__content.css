@@ -9,24 +9,28 @@
    border: 1px solid rgba(68, 70, 72, 0.596);
    position: relative;
 }
-.memb__shade{
+
+.memb__shade {
    position: absolute;
    border-radius: 10px;
-   z-index: -1;
+   z-index: -10;
    background: rgba(50, 51, 57, 0.313);
 }
-.memb__shade--1{
+
+.memb__shade--1 {
    width: 60%;
    height: 70%;
    top: -10%;
    left: -13%;
 }
-.memb__shade--2{
+
+.memb__shade--2 {
    width: 50%;
    height: 40%;
    bottom: -10%;
    right: -6%;
 }
+
 .memb__name {
    font-size: 4.5rem;
    color: rgb(227, 212, 80);
@@ -38,43 +42,31 @@
 .memb__role {
    margin: 20px 0px 0px 0px;
    font-size: 24px;
-   display: flex;
-   align-items: center;
    gap: 8px;
-}
-.memb__role span{
-   display: inline-block;
-   color: rgb(33, 29, 68);
+   color: whitesmoke;
    text-transform: capitalize;
 }
-span.main{
-   font-size: 24px;
-   color: rgb(202, 201, 201);
-   font-weight: bold;
-}
-.memb__about{
+
+.memb__about {
    margin: 20px 0px 0px 0px;
    font-size: 18px;
-   display: flex;
-   gap: 8px;
+   color: rgb(73, 65, 90);
+   line-height: 140%;
 }
-.memb__about span{
-   margin: 7px 0px 0px 0px;
-   display: inline-block;
-   color: rgb(56, 53, 82);
-   line-height: 130%;
-}
-span.main{
-   margin: 0px 0px 0px 0px;
-   font-size: 24px;
-   color: rgb(202, 201, 201);
-   font-weight: bold;
-}
+
 .memb__row {
    width: 100%;
    display: grid;
    grid-template-columns: 4fr 1fr;
    gap: 30px;
+}
+
+.memb__row.first {
+   grid-template-columns: 4fr 1fr;
+}
+
+.memb__row.second {
+   grid-template-columns: 1fr 4fr;
 }
 
 .memb__right {
@@ -93,6 +85,57 @@ span.main{
    /*-webkit-text-stroke-color: rgb(45, 44, 56);*/
    -webkit-text-stroke-color: rgb(89, 215, 110);
 }
-.memb__right> *:not(:last-child){
+
+.memb__right>*:not(:last-child) {
    border-bottom: 1px solid rgb(45, 44, 56);
+}
+
+@media (max-width: 1210px) {
+
+   .memb__row.second,
+   .memb__row.first {
+      grid-template-columns: 1fr;
+   }
+
+   .memb__row {
+      grid-template-columns: 1fr;
+   }
+
+   .memb__right {
+      flex-direction: row;
+   }
+
+   .memb__content {
+      width: 90%;
+      padding: 20px;
+   }
+   .memb__right>*:not(:last-child) {
+      border-bottom: 0px solid rgb(45, 44, 56);
+      border-right: 1px solid rgb(45, 44, 56);
+      padding: 0 10px 0 0 ;
+   }
+}
+@media (max-width: 1010px) {
+   .memb__right{
+      font-size: 7em;
+   }
+   .memb__name{
+      font-size: 3em;
+   }
+}
+@media (max-width: 440px){
+   .memb__right{
+      font-size: 5em;
+   }
+   .memb__name{
+      font-size: 1.5em;
+   }
+   .memb__role{
+      font-size: 18px;
+   }
+}
+@media (max-width: 360px){
+   .memb__right{
+      font-size: 3.5em;
+   }
 }

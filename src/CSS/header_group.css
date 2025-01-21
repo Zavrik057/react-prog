@@ -247,3 +247,49 @@
    transform: rotate(-10deg);
    width: 16em;
 }
+@media (max-width: 1010px){
+   .header-group__display{
+      grid-template-columns: 1fr;
+      position: relative;
+   }
+   .header-group__decor{
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      z-index: -3;
+   }
+   .header-group__skew {
+      width: 70%;
+      height: 40%;
+   }
+   .header-group__image {
+      width: 40%;
+      position: absolute;
+      z-index: 10;
+      left: 70%;
+      transform: translateX(-50%);
+      bottom: -5%;
+      object-fit: contain;
+      filter: grayscale(0.5);
+      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.668));
+   }
+   .back._back-2 {
+      right: 35%;
+   }
+}
+@media (max-width: 570px){
+   .header-group__skew {
+      width: 100%;
+      height: 40%;
+   }
+   .header-group__group{
+      font-size: 6em;
+   }
+}
+@media (max-width: 440px){
+   .header-group__group{
+      font-size: 4em;
+   }
+}

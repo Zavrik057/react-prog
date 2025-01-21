@@ -1,6 +1,6 @@
 
 import '../CSS/App.css';
-import { useState, useRef, useEffect, useLayoutEffect } from "react";
+import { useState, useRef, useEffect, useLayoutEffect, createContext } from "react";
 // import { source } from '../data/player__data.jsx';
 // import Player from './player.jsx';
 // import Members from './members.jsx';
@@ -20,35 +20,30 @@ import MainPage from '../pages/main_page.jsx';
 // import { ScrollTrigger } from "gsap-trial/ScrollTrigger";
 // import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
 
-export default function App() {
+export const GlobalState = createContext(null);
 
-  // if (typeof window !== "undefined") {
-  //   gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-  // }
-  // useLayoutEffect(() => {
-  //   let ctx = gsap.context(() => {
-  //     ScrollSmoother.create({
-  //       smooth: 2,
-  //       effects: 2,
-  //     });
-  //   });
-  //   return () => ctx.revert();
-  // }, []);
-  // gsap.config({trialWarn: false});
+export default function App() {
+  const [currentGroup, setCurrentGroup] = useState('scorpions');
+  const [likes, setLikes] = useState([]);
+  const [info, setInfo] = useState([]);
+
+
   return (
     <>
-      <div className="wrapper">
-        <BrowserRouter>
-          <ScrollToTop />
-          <Navbar />
-          <Routes>
-          <Route exact path='/' element={<MainPage />} />
-          <Route exact path='/' element={<MainPage />} />
-            <Route exact path='/:album' element={<GroupPage />} />
-            <Route exact path='/:album/:id' element={<AlbumPage />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
+      <GlobalState.Provider value={{ currentGroup, setCurrentGroup, likes, setLikes, info, setInfo }}>
+        <div className="wrapper">
+          <BrowserRouter>
+            <ScrollToTop />
+            <Navbar />
+            <Routes>
+              <Route exact path='/' element={<MainPage />} />
+              <Route exact path='/' element={<MainPage />} />
+              <Route exact path='/:album' element={<GroupPage />} />
+              <Route exact path='/:album/:id' element={<AlbumPage />} />
+            </Routes>
+          </BrowserRouter>
+        </div>
+      </GlobalState.Provider>
     </>
   );
 }
